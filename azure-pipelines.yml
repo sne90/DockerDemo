@@ -22,6 +22,6 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          repository: 'docker.io/snehaiyer69/weatherapi'
+          repository: 'snehaiyer69/weatherapi'
           command: 'buildAndPush'
           Dockerfile: '**/Dockerfile'
