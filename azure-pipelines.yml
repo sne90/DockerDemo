@@ -20,8 +20,14 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-      - task: Docker@2
-        inputs:
+    - task: Docker@2
+      inputs:
+       containerRegistry: 'DockerDemo'
+       command: 'login'
+          
+
+    - task: Docker@2
+      inputs:
           repository: 'snehaiyer69/weatherapi'
           command: 'buildAndPush'
           Dockerfile: '**/Dockerfile'
